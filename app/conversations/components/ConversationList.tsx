@@ -105,7 +105,7 @@ const ConversationList: React.FC<ConversationListProps> = ({
       >
         <div className="px-5">
           <div className="flex justify-between mb-4 pt-4">
-            <div className="text-2xl font-bold text-neutral-800">Messages</div>
+            <div className="text-2xl font-bold text-purple-600">Messages</div>
             <div
               onClick={() => setIsModalOpen(true)}
               className="
@@ -118,7 +118,7 @@ const ConversationList: React.FC<ConversationListProps> = ({
                 transition
               "
             >
-              <MdOutlineGroupAdd size={20} />
+              <MdOutlineGroupAdd size={25} className="text-purple-600" />
             </div>
           </div>
           {items.map((item) => (

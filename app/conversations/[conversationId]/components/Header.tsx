@@ -43,7 +43,7 @@ const Header: React.FC<HeaderProps> = ({ conversation }) => {
       />
       <div
         className="
-        bg-white 
+        bg-white
         w-full 
         flex 
         border-b-[1px] 
@@ -54,6 +54,7 @@ const Header: React.FC<HeaderProps> = ({ conversation }) => {
         justify-between 
         items-center 
         shadow-sm
+        drop-shadow-lg
       "
       >
         <div className="flex gap-3 items-center">
@@ -62,8 +63,8 @@ const Header: React.FC<HeaderProps> = ({ conversation }) => {
             className="
             lg:hidden 
             block 
-            text-sky-500 
-            hover:text-sky-600 
+            text-purple-500 
+            hover:text-purple-700 
             transition 
             cursor-pointer
           "
@@ -83,12 +84,12 @@ const Header: React.FC<HeaderProps> = ({ conversation }) => {
           </div>
         </div>
         <HiEllipsisHorizontal
-          size={32}
+          size={40}
           onClick={() => setDrawerOpen(true)}
           className="
-          text-sky-500
+          text-purple-500
           cursor-pointer
-          hover:text-sky-600
+          hover:text-purple-700
           transition
         "
         />

@@ -6,6 +6,7 @@ import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
 import { HiPaperAirplane, HiPhoto } from "react-icons/hi2";
 import MessageInput from "./MessageInput";
 import { CldUploadButton } from "next-cloudinary";
+import { MdInsertEmoticon } from "react-icons/md";
 
 const Form = () => {
   const { conversationId } = useConversation();
@@ -37,18 +38,18 @@ const Form = () => {
   };
 
   return (
-    <div className="py-4 px-4 bg-white border-t flex items-center gap-2 lg:gap-4 w-full">
+    <div className="py-4 px-4 bg-white border-t flex items-center gap-2 lg:gap-4 w-full drop-shadow-xl">
       <CldUploadButton
         options={{ maxFiles: 1 }}
         onUpload={handleUpload}
         uploadPreset="yxfm5i6k"
       >
-        <HiPhoto size={30} className="text-sky-500" />
+        <HiPhoto size={30} className="text-purple-500 hover:text-purple-600" />
       </CldUploadButton>
 
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="flex items-center gap-2 lg:gap-4 w-full"
+        className="flex items-center gap-2 lg:gap-6 w-full"
       >
         <MessageInput
           id="message"
@@ -57,18 +58,24 @@ const Form = () => {
           required
           placeholder="Write a message"
         />
+
+        <MdInsertEmoticon
+          size={35}
+          className="text-purple-500 hover:text-purple-600 cursor-pointer"
+        />
+
         <button
           type="submit"
           className="
-            rounded-full 
-            p-2 
-            bg-sky-500 
-            cursor-pointer 
-            hover:bg-sky-600 
+            rounded-full
+            p-2
+            bg-purple-500
+            cursor-pointer
+            hover:bg-purple-600
             transition
           "
         >
-          <HiPaperAirplane size={18} className="text-white" />
+          <HiPaperAirplane size={30} className="text-white" />
         </button>
       </form>
     </div>

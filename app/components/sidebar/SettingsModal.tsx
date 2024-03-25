@@ -106,8 +106,8 @@ const SettingsModal: React.FC<SettingsModalProps> = ({
                 </label>
                 <div className="mt-2 flex items-center gap-x-3">
                   <Image
-                    width="48"
-                    height="48"
+                    width="80"
+                    height="80"
                     className="rounded-full"
                     src={
                       image || currentUser?.image || "/images/placeholder.jpg"
@@ -119,9 +119,11 @@ const SettingsModal: React.FC<SettingsModalProps> = ({
                     onUpload={handleUpload}
                     uploadPreset="yxfm5i6k"
                   >
-                    <Button disabled={isLoading} secondary type="button">
-                      Change
-                    </Button>
+                    <div className="px-3 py-2 text-xs font-bold text-center bg-sky-400 rounded-lg hover:bg-sky-500">
+                      <Button disabled={isLoading} secondary type="button">
+                        Change
+                      </Button>
+                    </div>
                   </CldUploadButton>
                 </div>
               </div>
